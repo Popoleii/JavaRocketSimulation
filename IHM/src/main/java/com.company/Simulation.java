@@ -144,7 +144,7 @@ public class Simulation {
 
         Rturn.add(X);
         Rturn.add(Y);
-        Rturn.add(cost / nbrIterations);
+        Rturn.add((int)cost / nbrIterations);
         Rturn.add(lifeCost / nbrIterations);
 
         return Rturn;
