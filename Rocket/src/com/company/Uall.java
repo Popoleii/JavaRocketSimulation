@@ -7,6 +7,7 @@ public class Uall extends Rocket {
         this.maxWeight = Weight + carryWeight;
         this.launchExplosion = launch;
         this.landingCrash = landing;
+        this.lifeCost = 5;
 
 
         this.cost = (int) (((maxWeight - Weight)/160 + (1/landingCrash + 1/launchExplosion)/2.4)* 1000000);

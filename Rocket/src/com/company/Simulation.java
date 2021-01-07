@@ -29,8 +29,8 @@ public class Simulation {
         ArrayList<Item> items = new ArrayList();
         int i;
         for (i=0; i< liste.size(); i++){
-            String[] item = liste2[i].toString().split(",",3);
-            items.add(new Item(item[0],Integer.parseInt(item[1]),Integer.parseInt(item[2])));
+            String[] item = liste2[i].toString().split(",",4);
+            items.add(new Item(item[0],Integer.parseInt(item[1]),Integer.parseInt(item[2]),Integer.parseInt(item[3])));
         }
 
      return items;
@@ -98,9 +98,11 @@ public class Simulation {
         return rockets;
     }
 
-    static int runSimulation(ArrayList<Rocket> rockets){
+    static ArrayList<Integer> runSimulation(ArrayList<Rocket> rockets){
         int totalPrice = 0;
+        int lifePrice = 0;
         int i;
+        ArrayList r = new ArrayList();
 
         for (i=0;i< rockets.size();i++){
             totalPrice += rockets.get(i).cost;
@@ -108,9 +110,12 @@ public class Simulation {
             while (!rockets.get(i).launch() || !rockets.get(i).landing()){
                 totalPrice += rockets.get(i).cost;
                 totalPrice += rockets.get(i).carryCost;
+                lifePrice += rockets.get(i).lifeCost;
             }
         }
-        return totalPrice;
+        r.add(totalPrice);
+        r.add(lifePrice);
+        return (r);
     }
 
 

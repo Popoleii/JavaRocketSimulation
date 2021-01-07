@@ -8,10 +8,13 @@ public class Item {
 
     int Cost;
 
-    public Item( String Name, int Weight, int cost){
+    int Life;
+
+    public Item( String Name, int Weight, int Cost, int Life){
         this.Name = Name;
         this.Weight = Weight;
-        this.Cost = cost;
+        this.Cost = Cost;
+        this.Life = Life;
     }
 
 

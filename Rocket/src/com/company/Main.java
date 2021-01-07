@@ -13,15 +13,19 @@ public class Main {
         ArrayList U1_phase_2 = Simulation.loadU1(phase_2);
         ArrayList U2_phase_1 = Simulation.loadU2(phase_1);
         ArrayList U2_phase_2 = Simulation.loadU2(phase_2);
-        ArrayList Uall_phase_1 = Simulation.loadUall(phase_1,8000,0.05,0.01);
+        ArrayList Uall_phase_2 = Simulation.loadUall(phase_2,8000,0.05,0.01);
 
 
         int nbrIterations = 100000;
         int i;
         long cost =0 ;
+        long lifeCost = 0 ;
         for(i=0; i<nbrIterations;i++){
-            cost+= Simulation.runSimulation(Uall_phase_1);
+            ArrayList R=Simulation.runSimulation(Uall_phase_2);
+            cost += (int)R.get(0);
+            lifeCost += (int)R.get(1);
         }
         System.out.println(cost/nbrIterations);
+        System.out.println(lifeCost/nbrIterations);
     }
 }
