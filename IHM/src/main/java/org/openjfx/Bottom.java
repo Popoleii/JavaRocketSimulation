@@ -16,16 +16,16 @@ public class Bottom {
     private int stop = 0;
     public static int averageCost;
     public static Label averageCostlabel;
-    int nbierations;
-    Label nbiterationslabel;
+    public static int averageLifeLost;
+    public static Label averageLifeLostlabel;
+    public static int nbierations;
+    public static Label nbiterationslabel;
     Label resultatslabel;
     int oneRocketCost = 10;
     Label oneRocketCostlabel;
 
-    int averageLifeLost = 10;
-    Label averageLifeLostlabel;
-    int nbFuseesUtilisees = 10;
-    Label nbFuseesUtiliseeslabel;
+    public static int nbFuseesUtilisees = 10;
+    public static Label nbFuseesUtiliseeslabel;
 
     public VBox bottom(){
 

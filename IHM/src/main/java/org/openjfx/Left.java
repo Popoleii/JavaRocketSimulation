@@ -92,7 +92,12 @@ public class Left {
 
                 Bottom.averageCost = (int)Results.get(2);
                 Bottom.averageCostlabel.setText("Prix moyen de la mission: " +Bottom.averageCost);
-                System.out.println(Bottom.averageCost);
+                Bottom.averageLifeLost = (int)Results.get(3);
+                Bottom.averageLifeLostlabel.setText("Cout moyen en vies humaines: " +Bottom.averageLifeLost);
+                Bottom.nbierations = (int)Results.get(4);
+                Bottom.nbiterationslabel.setText("Nombre d'itérations effectuées :" +Bottom.nbierations);
+                Bottom.nbFuseesUtilisees = (int)Results.get(5);
+                Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
             }
         });
 
@@ -104,6 +109,16 @@ public class Left {
             @Override
             public void handle(ActionEvent actionEvent) {
                 // lancer la simulattion et l'affichage des résultats avec des rockets U2
+                ArrayList Results = Simulation.SimulateU2(monFichier,(int)remplissage);
+
+                Bottom.averageCost = (int)Results.get(2);
+                Bottom.averageCostlabel.setText("Prix moyen de la mission: " +Bottom.averageCost);
+                Bottom.averageLifeLost = (int)Results.get(3);
+                Bottom.averageLifeLostlabel.setText("Cout moyen en vies humaines: " +Bottom.averageLifeLost);
+                Bottom.nbierations = (int)Results.get(4);
+                Bottom.nbiterationslabel.setText("Nombre d'itérations effectuées :" +Bottom.nbierations);
+                Bottom.nbFuseesUtilisees = (int)Results.get(5);
+                Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
             }
         });
 
@@ -160,7 +175,7 @@ public class Left {
             }
         });
 
-        // land Crash Probabily
+        // land Crash Probabilyti
         landCrashProbabilitylabel = new Label("Probabilité de crash au décollage souhaitée:");
         landCrashProbabilityslider = new Slider(1, 50, 50);
         landCrashProbabilityslider.setMin(1);

@@ -95,22 +95,26 @@ public class Simulation {
     }
 
     static ArrayList<Integer> runSimulation(ArrayList<Rocket> rockets) {
-        int totalPrice = 0;
+        long totalPrice = 0;
         int lifePrice = 0;
         int i;
         ArrayList r = new ArrayList();
+        int k =0;
 
         for (i = 0; i < rockets.size(); i++) {
             totalPrice += rockets.get(i).cost;
             totalPrice += rockets.get(i).carryCost;
+            k++;
             while (!rockets.get(i).launch() || !rockets.get(i).landing()) {
                 totalPrice += rockets.get(i).cost;
                 totalPrice += rockets.get(i).carryCost;
                 lifePrice += rockets.get(i).lifeCost;
+                k++;
             }
         }
         r.add(totalPrice);
         r.add(lifePrice);
+        r.add(k);
         return (r);
     }
 
@@ -133,12 +137,15 @@ public class Simulation {
         i = 0;
         long cost = 0;
         long lifeCost = 0;
+        long nbrFusees = 0;
         for (i = 0; i < nbrIterations; i++) {
             ArrayList R = Simulation.runSimulation(U1_phase_1);
-            //int k = (int)((int) R.get(0) / 100000000);
-            //Y.set(k, (int) Y.get(k) + 1);
-            cost += (int) R.get(0);
+            long kk =  (long)R.get(0) / ((long)100000000);
+            int k = (int)kk;
+            Y.set(k, (int) Y.get(k) + 1);
+            cost += (long) R.get(0);
             lifeCost += (int) R.get(1);
+            nbrFusees += (int) R.get(2);
         }
         long avgCost = cost/nbrIterations;
 
@@ -146,7 +153,9 @@ public class Simulation {
         Rturn.add(X);
         Rturn.add(Y);
         Rturn.add((int) avgCost);
-        Rturn.add(lifeCost / nbrIterations);
+        Rturn.add((int)(lifeCost / nbrIterations));
+        Rturn.add(nbrIterations);
+        Rturn.add((int)(nbrFusees/nbrIterations));
 
         return Rturn;
     }
@@ -169,12 +178,14 @@ public class Simulation {
         i = 0;
         long cost = 0;
         long lifeCost = 0;
+        long nbrFusees = 0;
         for (i = 0; i < nbrIterations; i++) {
             ArrayList R = Simulation.runSimulation(U1_phase_1);
             int k = (int) R.get(0) / 100000000;
             Y.set(k, (int) Y.get(k) + 1);
             cost += (int) R.get(0);
             lifeCost += (int) R.get(1);
+            nbrFusees += (int) R.get(2);
         }
         long avgCost = cost/nbrIterations;
 
@@ -182,10 +193,14 @@ public class Simulation {
         Rturn.add(X);
         Rturn.add(Y);
         Rturn.add((int) avgCost);
-        Rturn.add(lifeCost / nbrIterations);
+        Rturn.add((int)(lifeCost / nbrIterations));
+        Rturn.add(nbrIterations);
+        Rturn.add((int)(nbrFusees/nbrIterations));
 
-        return Rturn;
+
+    return Rturn;
     }
+
 
     static public ArrayList SimulateUall(String phase, int carryWeight, double launch, double landing, int remplissage) {
         double launchV = launch / 100;
@@ -206,12 +221,14 @@ public class Simulation {
         i = 0;
         long cost = 0;
         long lifeCost = 0;
+        long nbrFusees = 0;
         for (i = 0; i < nbrIterations; i++) {
             ArrayList R = Simulation.runSimulation(U1_phase_1);
             int k = (int) R.get(0) / 100000000;
             Y.set(k, (int) Y.get(k) + 1);
             cost += (int) R.get(0);
             lifeCost += (int) R.get(1);
+            nbrFusees += (int) R.get(2);
         }
         long avgCost = cost/nbrIterations;
 
@@ -219,7 +236,10 @@ public class Simulation {
         Rturn.add(X);
         Rturn.add(Y);
         Rturn.add((int) avgCost);
-        Rturn.add(lifeCost / nbrIterations);
+        Rturn.add((int)(lifeCost / nbrIterations));
+        Rturn.add(nbrIterations);
+        Rturn.add((int)(nbrFusees/nbrIterations));
+
 
         return Rturn;
     }
