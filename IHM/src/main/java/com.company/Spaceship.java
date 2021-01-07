@@ -8,7 +8,7 @@ public interface Spaceship {
 
     boolean landing() ;
 
-    boolean canCarry(Item a) ;
+    boolean canCarry(Item a, int remplissage) ;
 
     void carry(Item a) ;
 
