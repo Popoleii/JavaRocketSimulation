@@ -22,9 +22,9 @@ public class Rocket implements Spaceship {
     }
 
     @Override
-    public boolean canCarry(Item a) {
-
-        if (a.Weight > (maxWeight - Weight)) {
+    public boolean canCarry(Item a, int remplissage) {
+        remplissage = remplissage/100;
+        if (a.Weight > (int)((maxWeight - Weight)*remplissage)){
             return false;
         }
         else{
