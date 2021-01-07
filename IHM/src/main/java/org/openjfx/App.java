@@ -1,5 +1,5 @@
 package org.openjfx;
-
+package com.company;
 import javafx.application.Application;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
