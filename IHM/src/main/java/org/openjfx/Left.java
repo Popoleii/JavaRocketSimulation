@@ -16,7 +16,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Left {
-    public static String monFichier;
+    public static String monFichier = "/home/lahlouh/Documents/Scolaire/ENSTA B/FISE 2A/S3/Info pure/JAVA/projet/JavaRocketSimulation/IHM/src/main/java/com.company/Phase-1.txt";
     public int cargoWeight;
     Label cargoWeightlabel;
     Slider cargoWeightslider;
@@ -59,6 +59,7 @@ public class Left {
             @Override
             public void handle(ActionEvent actionEvent) {
                 monFichier = chemin.getAccessibleText();
+
             }
         });
 

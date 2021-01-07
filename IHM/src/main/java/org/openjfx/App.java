@@ -38,19 +38,23 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         BorderPane border = new BorderPane();
-        Top vboxtop = new Top();
-        Right vboxright = new Right();
-        Center vboxcenter = new Center();
-        Left vboxleft = new Left();
-        Bottom vboxbottom = new Bottom();
 
+
+        Top vboxtop = new Top();
         border.setTop(vboxtop.top());
-        border.setRight(vboxright.right());
+
+        Center vboxcenter = new Center();
         border.setCenter(vboxcenter.center());
+
+        Left vboxleft = new Left();
         border.setLeft(vboxleft.left());
+
+        Bottom vboxbottom = new Bottom();
         border.setBottom(vboxbottom.bottom());
 
-        //addStackPane(hbox);         // Add stack to HBox in top region
+        Right vboxright = new Right();
+        border.setRight(vboxright.right());
+
 
         Scene scene =  new Scene(border, 1920, 1080);
         stage.setTitle("Mission To Mars Decision Tool");
