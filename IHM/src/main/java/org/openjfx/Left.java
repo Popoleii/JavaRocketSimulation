@@ -134,7 +134,8 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number capacitefusee) {
                 cargoWeight = (int) cargoWeightslider.getValue();
-                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                Bottom.oneRocketCost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                Bottom.oneRocketCostlabel.setText("Prix unitaire des fusées utilisées: " +Bottom.oneRocketCost);
 
 
             }
@@ -156,7 +157,8 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 launchCrashProbabily = (int) launchCrashProbabilyslider.getValue();
-                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                Bottom.oneRocketCost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                Bottom.oneRocketCostlabel.setText("Prix unitaire des fusées utilisées: " +Bottom.oneRocketCost);
             }
         });
 
@@ -176,7 +178,8 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 landCrashProbability = (int) landCrashProbabilityslider.getValue();
-                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                Bottom.oneRocketCost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                Bottom.oneRocketCostlabel.setText("Prix unitaire des fusées utilisées: " +Bottom.oneRocketCost);
             }
 
         });

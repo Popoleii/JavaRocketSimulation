@@ -13,19 +13,21 @@ import javafx.scene.text.Font;
 import javafx.util.Duration;
 
 public class Bottom {
+    public static int nbFuseesUtilisees;
+    public static Label nbFuseesUtiliseeslabel;
+    public static int oneRocketCost;
+    public static Label oneRocketCostlabel;
     private int stop = 0;
     public static int averageCost;
     public static Label averageCostlabel;
     int nbierations;
     Label nbiterationslabel;
     Label resultatslabel;
-    int oneRocketCost = 10;
-    Label oneRocketCostlabel;
+
 
     int averageLifeLost = 10;
     Label averageLifeLostlabel;
-    int nbFuseesUtilisees = 10;
-    Label nbFuseesUtiliseeslabel;
+
 
     public VBox bottom(){
 
@@ -38,6 +40,7 @@ public class Bottom {
         resultatslabel.setTextFill(Color.web("#0076a3"));
         nbiterationslabel = new Label("Nombre d'itérations effectuées: " + nbierations);
         oneRocketCostlabel = new Label("Prix unitaire des fusées utilisées: " + oneRocketCost );
+
         nbFuseesUtiliseeslabel = new Label("Nombre de fusées utilisées: " +nbFuseesUtilisees);
         averageCostlabel = new Label("Prix moyen de la mission: " +averageCost);
         averageLifeLostlabel = new Label("Cout moyen en vies humaines: " +averageLifeLost);
