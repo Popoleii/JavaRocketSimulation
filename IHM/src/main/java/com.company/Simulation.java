@@ -115,7 +115,7 @@ public class Simulation {
     }
 
 
-    public ArrayList SimulateU1(String phase, int remplissage) {
+    static public ArrayList SimulateU1(String phase, int remplissage) {
 
         ArrayList Rturn = new ArrayList();
         ArrayList phase_1 = Simulation.loadItems(phase);
@@ -150,7 +150,7 @@ public class Simulation {
         return Rturn;
     }
 
-    public ArrayList SimulateU2(String phase, int remplissage) {
+    static public ArrayList SimulateU2(String phase, int remplissage) {
 
         ArrayList Rturn = new ArrayList();
         ArrayList phase_1 = Simulation.loadItems(phase);
@@ -185,7 +185,7 @@ public class Simulation {
         return Rturn;
     }
 
-    public ArrayList SimulateUall(String phase, int carryWeight, double launch, double landing, int remplissage) {
+    static public ArrayList SimulateUall(String phase, int carryWeight, double launch, double landing, int remplissage) {
         double launchV = launch / 100;
         double landingV = landing / 100;
         ArrayList Rturn = new ArrayList();

@@ -1,5 +1,6 @@
 package org.openjfx;
 
+import com.company.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -14,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import java.util.ArrayList;
 
 public class Left {
     public static String monFichier = "/home/lahlouh/Documents/Scolaire/ENSTA B/FISE 2A/S3/Info pure/JAVA/projet/JavaRocketSimulation/IHM/src/main/java/com.company/Phase-1.txt";
@@ -39,6 +41,8 @@ public class Left {
     Label chemintxt;
     TextField chemin;
     Label choixfusee;
+    
+
     public VBox left(){
         Button buttonU1;
         Button buttonU2;
@@ -78,7 +82,8 @@ public class Left {
         buttonU1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                //lancer la simulattion et l'affichage des résultats avec des rockets U1
+                //lancer la simulation et l'affichage des résultats avec des rockets U1
+                ArrayList Results = Simulation.SimulateU1(monFichier,(int)remplissage);
             }
         });
 
