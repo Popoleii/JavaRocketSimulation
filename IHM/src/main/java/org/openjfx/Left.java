@@ -16,6 +16,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Left {
+    public static String monFichier;
     public int cargoWeight;
     Label cargoWeightlabel;
     Slider cargoWeightslider;
@@ -37,7 +38,6 @@ public class Left {
     Label general;
     Label chemintxt;
     TextField chemin;
-    String monFichier;
     Label choixfusee;
     public VBox left(){
         Button buttonU1;
@@ -68,7 +68,7 @@ public class Left {
 
 
         choixfusee = new Label("2.Choix de la fusée:");
-        choixfusee.setFont(Font.font("Cambria", 15));
+        choixfusee.setFont(Font.font("Cambria", 25));
         choixfusee.setTextFill(Color.web("#0076a3"));
         /** Rocket u1 **/
         Label text1 = new Label("Simuler avec des fusée U1:");
@@ -101,6 +101,8 @@ public class Left {
 
 
         costlabel = new Label("Prix d'une fusée: " + cost);
+
+
         // Cargo Weight
         cargoWeightlabel = new Label("Capacité de chargement souhaitée:");
         cargoWeightslider = new Slider(0, 100, 50);

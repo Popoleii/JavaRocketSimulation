@@ -9,7 +9,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 public class Simulation {
 
-    static ArrayList loadItems(String textFile) {
+    public static ArrayList loadItems(String textFile) {
 
         ArrayList liste = new ArrayList();
         try{
