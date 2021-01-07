@@ -44,6 +44,11 @@ public class Left {
     
 
     public VBox left(){
+        ArrayList Results = new ArrayList();
+        int i;
+        for (i=0;i<4;i++){
+            Results.add(" ");
+        }
         Button buttonU1;
         Button buttonU2;
         Button buttonU3;
