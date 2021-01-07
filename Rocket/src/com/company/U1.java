@@ -5,7 +5,7 @@ public class U1 extends Rocket {
     public U1(){
         this.Weight = 10000;
         this.maxWeight = 18000;
-        this.cost = 100;
+        this.cost = 100000000;
         this.launchExplosion = 0.05;
         this.landingCrash = 0.01;
 
@@ -19,7 +19,7 @@ public class U1 extends Rocket {
 
     @Override
     public boolean landing() {
-        double x = Math.random();;
+        double x = Math.random();
         if (x < probaLanding()) {
             return false;
         } else {

@@ -18,7 +18,7 @@ public class Main {
 
         int nbrIterations = 100000;
         int i;
-        int cost =0 ;
+        long cost =0 ;
         for(i=0; i<nbrIterations;i++){
             cost+= Simulation.runSimulation(Uall_phase_1);
         }

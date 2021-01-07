@@ -9,7 +9,7 @@ public class Uall extends Rocket {
         this.landingCrash = landing;
 
 
-        this.cost = (int) ((maxWeight - Weight)/160 + (1/landingCrash + 1/launchExplosion)/2.4);
+        this.cost = (int) (((maxWeight - Weight)/160 + (1/landingCrash + 1/launchExplosion)/2.4)* 1000000);
 
     }
     double probaLanding(){
@@ -21,8 +21,7 @@ public class Uall extends Rocket {
 
     @Override
     public boolean landing() {
-        System.out.println(cost);
-        double x = Math.random();;
+        double x = Math.random();
         if (x < probaLanding()) {
             return false;
         } else {

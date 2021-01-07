@@ -7,6 +7,7 @@ public class Rocket implements Spaceship {
     protected int cost;
     protected double launchExplosion ;
     protected double landingCrash  ;
+    int carryCost;
 
     @Override
     public boolean launch() {
@@ -34,6 +35,7 @@ public class Rocket implements Spaceship {
     @Override
     public void carry(Item a) {
         Weight = Weight + a.Weight;
+        carryCost = carryCost + a.Cost;
     }
 
 

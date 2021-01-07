@@ -6,7 +6,7 @@ public class U2<Rock> extends Rocket {
     public U2(){
         this.Weight = 18000;
         this.maxWeight = 29000;
-        this.cost = 120;
+        this.cost = 120000000;
         this.launchExplosion = 0.04;
         this.landingCrash = 0.08;
     }
