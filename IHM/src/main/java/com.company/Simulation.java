@@ -119,9 +119,46 @@ public class Simulation {
     }
 
 
+    public ArrayList SimulateU1(String phase){
+
+        ArrayList Rturn = new ArrayList();
+        ArrayList phase_1 = Simulation.loadItems(phase);
+        ArrayList U1_phase_1 = Simulation.loadU1(phase_1);
+
+
+        ArrayList<Long> X = new ArrayList<Long>();
+        ArrayList Y = new ArrayList();
+        int i;
+        for (i = 0; i < 15; i++) {
+            X.add((long) i * 100000000);
+            Y.add(0);
+        }
+        int nbrIterations = 100000;
+        i = 0;
+        long cost = 0;
+        long lifeCost = 0;
+        for (i = 0; i < nbrIterations; i++) {
+            ArrayList R = Simulation.runSimulation(U1_phase_1);
+            int k = (int) R.get(0) / 100000000;
+            Y.set(k, (int) Y.get(k) + 1);
+            cost += (int) R.get(0);
+            lifeCost += (int) R.get(1);
+        }
+
+
+        Rturn.add(X);
+        Rturn.add(Y);
+        Rturn.add(cost/nbrIterations);
+        Rturn.add(lifeCost/nbrIterations);
+
+        return Rturn;
+    }}
 
 
 
 
 
-}
+
+
+
+
