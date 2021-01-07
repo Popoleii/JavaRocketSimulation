@@ -18,7 +18,7 @@ import javafx.scene.text.Font;
 import java.util.ArrayList;
 
 public class Left {
-    public static String monFichier = "/home/lahlouh/Documents/Scolaire/ENSTA B/FISE 2A/S3/Info pure/JAVA/projet/JavaRocketSimulation/IHM/src/main/java/com.company/Phase-1.txt";
+    public static String monFichier = "../IHM/src/main/java/com.company/Phase-1.txt";
     public int cargoWeight;
     Label cargoWeightlabel;
     Slider cargoWeightslider;

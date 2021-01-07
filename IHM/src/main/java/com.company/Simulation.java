@@ -140,11 +140,12 @@ public class Simulation {
             cost += (int) R.get(0);
             lifeCost += (int) R.get(1);
         }
+        long avgCost = cost/nbrIterations;
 
 
         Rturn.add(X);
         Rturn.add(Y);
-        Rturn.add((int)cost / nbrIterations);
+        Rturn.add((int) avgCost);
         Rturn.add(lifeCost / nbrIterations);
 
         return Rturn;
@@ -175,11 +176,12 @@ public class Simulation {
             cost += (int) R.get(0);
             lifeCost += (int) R.get(1);
         }
+        long avgCost = cost/nbrIterations;
 
 
         Rturn.add(X);
         Rturn.add(Y);
-        Rturn.add(cost / nbrIterations);
+        Rturn.add((int) avgCost);
         Rturn.add(lifeCost / nbrIterations);
 
         return Rturn;
@@ -211,11 +213,12 @@ public class Simulation {
             cost += (int) R.get(0);
             lifeCost += (int) R.get(1);
         }
+        long avgCost = cost/nbrIterations;
 
 
         Rturn.add(X);
         Rturn.add(Y);
-        Rturn.add(cost / nbrIterations);
+        Rturn.add((int) avgCost);
         Rturn.add(lifeCost / nbrIterations);
 
         return Rturn;
