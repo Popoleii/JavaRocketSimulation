@@ -8,12 +8,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Bottom {
+    public static int averageCost;
     int nbierations;
     Label nbiterationslabel;
     Label resultatslabel;
     int oneRocketCost = 10;
     Label oneRocketCostlabel;
-    int averageCost = 10;
     Label averageCostlabel;
     int averageLifeLost = 10;
     Label averageLifeLostlabel;

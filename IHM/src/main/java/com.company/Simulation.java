@@ -125,7 +125,7 @@ public class Simulation {
         ArrayList<Long> X = new ArrayList<Long>();
         ArrayList Y = new ArrayList();
         int i;
-        for (i = 0; i < 15; i++) {
+        for (i = 0; i < 25; i++) {
             X.add((long) i * 100000000);
             Y.add(0);
         }
@@ -135,8 +135,8 @@ public class Simulation {
         long lifeCost = 0;
         for (i = 0; i < nbrIterations; i++) {
             ArrayList R = Simulation.runSimulation(U1_phase_1);
-            int k = (int) R.get(0) / 100000000;
-            Y.set(k, (int) Y.get(k) + 1);
+            //int k = (int)((int) R.get(0) / 100000000);
+            //Y.set(k, (int) Y.get(k) + 1);
             cost += (int) R.get(0);
             lifeCost += (int) R.get(1);
         }

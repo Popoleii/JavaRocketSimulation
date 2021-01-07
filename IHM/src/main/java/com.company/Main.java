@@ -16,8 +16,6 @@ public class Main {
 //        ArrayList Uall_phase_2 = Simulation.loadUall(phase_2, 8000, 0.05, 0.01);
 
 
-
-
 //        ArrayList<Long> X = new ArrayList<Long>();
 //        ArrayList Y = new ArrayList();
 //        int i;
@@ -40,4 +38,4 @@ public class Main {
 //        System.out.println(lifeCost / nbrIterations);
 //        System.out.println((int) Y.get(9));
 //    }
-}
+    }}
