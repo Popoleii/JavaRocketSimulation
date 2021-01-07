@@ -1,20 +1,27 @@
 package org.openjfx;
 
+import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.util.Duration;
 
 public class Bottom {
+    private int stop = 0;
     public static int averageCost;
+    public static Label averageCostlabel;
     int nbierations;
     Label nbiterationslabel;
     Label resultatslabel;
     int oneRocketCost = 10;
     Label oneRocketCostlabel;
-    Label averageCostlabel;
+
     int averageLifeLost = 10;
     Label averageLifeLostlabel;
     int nbFuseesUtilisees = 10;
@@ -29,19 +36,23 @@ public class Bottom {
         resultatslabel = new Label("3.Résultats numériques de la simulation:");
         resultatslabel.setFont(Font.font("Cambria", 25));
         resultatslabel.setTextFill(Color.web("#0076a3"));
-
         nbiterationslabel = new Label("Nombre d'itérations effectuées: " + nbierations);
         oneRocketCostlabel = new Label("Prix unitaire des fusées utilisées: " + oneRocketCost );
         nbFuseesUtiliseeslabel = new Label("Nombre de fusées utilisées: " +nbFuseesUtilisees);
         averageCostlabel = new Label("Prix moyen de la mission: " +averageCost);
         averageLifeLostlabel = new Label("Cout moyen en vies humaines: " +averageLifeLost);
 
-        root.getChildren().addAll(resultatslabel);
-        root.getChildren().addAll(nbiterationslabel);
-        root.getChildren().addAll(oneRocketCostlabel);
-        root.getChildren().addAll(nbFuseesUtiliseeslabel);
-        root.getChildren().addAll(averageCostlabel);
-        root.getChildren().addAll(averageLifeLostlabel);
+
+
+
+            root.getChildren().addAll(resultatslabel);
+            root.getChildren().addAll(nbiterationslabel);
+            root.getChildren().addAll(oneRocketCostlabel);
+            root.getChildren().addAll(nbFuseesUtiliseeslabel);
+            root.getChildren().addAll(averageCostlabel);
+            root.getChildren().addAll(averageLifeLostlabel);
+            PauseTransition pause = new PauseTransition(Duration.seconds(1));
+
 
 
         return root;

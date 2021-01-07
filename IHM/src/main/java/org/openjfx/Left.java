@@ -89,7 +89,10 @@ public class Left {
             public void handle(ActionEvent actionEvent) {
                 //lancer la simulation et l'affichage des résultats avec des rockets U1
                 ArrayList Results = Simulation.SimulateU1(monFichier,(int)remplissage);
-                Bottom.averageCost = (int) Results.get(2);
+
+                Bottom.averageCost = (int)Results.get(2);
+                Bottom.averageCostlabel.setText("Prix moyen de la mission: " +Bottom.averageCost);
+                System.out.println(Bottom.averageCost);
             }
         });
 

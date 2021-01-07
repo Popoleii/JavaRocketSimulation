@@ -17,7 +17,6 @@ public class Right {
         int n = items.size();
         for (int i=0; i<n; i++){
             Label currentlabel = new Label("Item"+i+":\n Nom: " + items.get(i).getName()+ "\n Poids :" + items.get(i).getWeight()+ "kg \n Prix :" + items.get(i).getCost()+ " euros \n Vies :" + items.get(i).getLife()+"\n");
-            System.out.println(items.get(i).getName());
             root.getChildren().addAll(currentlabel);
 
         }

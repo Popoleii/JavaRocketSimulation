@@ -33,21 +33,22 @@ import java.io.IOException;
  */
 public class App extends Application {
 
+    public static Bottom vboxbottom;
     private static Scene scene;
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, InterruptedException {
         BorderPane border = new BorderPane();
 
 
         Top vboxtop = new Top();
         border.setTop(vboxtop.top());
 
-        Center vboxcenter = new Center();
-        border.setCenter(vboxcenter.center());
-
         Left vboxleft = new Left();
         border.setLeft(vboxleft.left());
+
+        Center vboxcenter = new Center();
+        border.setCenter(vboxcenter.center());
 
         Bottom vboxbottom = new Bottom();
         border.setBottom(vboxbottom.bottom());
