@@ -26,14 +26,14 @@ import java.util.List;
 public class Left {
     public static String monFichier = "../IHM/src/main/java/com.company/Phase-1.txt";
     public static Node chart;
-    public int cargoWeight;
+    public int cargoWeight = 50;
     Label cargoWeightlabel;
     Slider cargoWeightslider;
 
-    private float launchCrashProbabily;
+    private float launchCrashProbabily = 25;
     Label launchCrashProbabilylabel;
     Slider launchCrashProbabilyslider;
-    private float landCrashProbability;
+    private float landCrashProbability = 25;
     Label landCrashProbabilitylabel;
     Slider landCrashProbabilityslider;
     private float remplissage;
@@ -150,21 +150,23 @@ public class Left {
 
         // Cargo Weight
         cargoWeightlabel = new Label("Capacité de chargement souhaitée:");
-        cargoWeightslider = new Slider(0, 100, 50);
+        cargoWeightslider = new Slider(0, 50, 25);
         cargoWeightslider.setMin(0);
         cargoWeightslider.setMax(100);
         cargoWeightslider.setValue(50);
+        cargoWeight = 50;
         cargoWeightslider.setShowTickLabels(true);
         cargoWeightslider.setShowTickMarks(true);
         cargoWeightslider.setMajorTickUnit(50);
         cargoWeightslider.setMinorTickCount(5);
-        cargoWeightslider.setBlockIncrement(10);
+        cargoWeightslider.setBlockIncrement(1);
         cargoWeightslider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number capacitefusee) {
                 cargoWeight = (int) cargoWeightslider.getValue();
-                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                cost = (int) ((((double)cargoWeight)/160 + (1/(landCrashProbability/100)) + 1/(launchCrashProbabily/100)/2.4)* 10000000);
+
                 costlabel.setText("Rocket cost: " + cost);
 
 
@@ -177,6 +179,7 @@ public class Left {
         launchCrashProbabilyslider.setMin(1);
         launchCrashProbabilyslider.setMax(50);
         launchCrashProbabilyslider.setValue(25);
+        landCrashProbability = 25;
         launchCrashProbabilyslider.setShowTickLabels(true);
         launchCrashProbabilyslider.setShowTickMarks(true);
         launchCrashProbabilyslider.setMajorTickUnit(24);
@@ -187,7 +190,7 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 launchCrashProbabily = (int) launchCrashProbabilyslider.getValue();
-                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                cost = (int) ((((double)cargoWeight)/160 + (1/(landCrashProbability/100)) + 1/(launchCrashProbabily/100)/2.4)* 10000000);
                 costlabel.setText("Rocket cost: " + cost);
             }
         });
@@ -198,6 +201,7 @@ public class Left {
         landCrashProbabilityslider.setMin(1);
         landCrashProbabilityslider.setMax(50);
         landCrashProbabilityslider.setValue(25);
+        landCrashProbability = 25;
         landCrashProbabilityslider.setShowTickLabels(true);
         landCrashProbabilityslider.setShowTickMarks(true);
         landCrashProbabilityslider.setMajorTickUnit(24);
@@ -208,7 +212,7 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 landCrashProbability = (int) landCrashProbabilityslider.getValue();
-                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                cost = (int) ((((double)cargoWeight)/160 + (1/(landCrashProbability/100)) + 1/(launchCrashProbabily/100)/2.4)* 10000000);
                 costlabel.setText("Rocket cost: " + cost);
             }
 
