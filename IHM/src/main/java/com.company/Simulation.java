@@ -129,7 +129,7 @@ public class Simulation {
         ArrayList<Integer> X = new ArrayList<Integer>();
         ArrayList Y = new ArrayList();
         int i;
-        for (i = 0; i < 25; i++) {
+        for (i = 0; i < 40; i++) {
             X.add((int) i * 100);
             Y.add(0);
         }
@@ -170,7 +170,7 @@ public class Simulation {
         ArrayList<Long> X = new ArrayList<Long>();
         ArrayList Y = new ArrayList();
         int i;
-        for (i = 0; i < 25; i++) {
+        for (i = 0; i < 40; i++) {
             X.add((long) i * 100000000);
             Y.add(0);
         }
@@ -214,7 +214,7 @@ public class Simulation {
         ArrayList<Long> X = new ArrayList<Long>();
         ArrayList Y = new ArrayList();
         int i;
-        for (i = 0; i < 25; i++) {
+        for (i = 0; i < 40; i++) {
             X.add((long) i * 100000000);
             Y.add(0);
         }

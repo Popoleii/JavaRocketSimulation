@@ -33,7 +33,7 @@ public class Center {
 
 
         // Création du graphique.
-        final NumberAxis xAxis = new NumberAxis(0, 2500,100 );
+        final NumberAxis xAxis = new NumberAxis(0, 3000,100 );
         xAxis.setLabel("x");
         final NumberAxis yAxis = new NumberAxis(0, 100, 5);
         yAxis.setLabel("y = Math.pow(x, n)");
@@ -48,7 +48,7 @@ public class Center {
                 final List<LineChart.Series> seriesList = new LinkedList<>();
                 final int maxN = 1;
                 final int minX = 0;
-                final int maxX = 24;
+                final int maxX = 29;
                 double minY = 0;
                 double maxY = 0;
                 for (int n = 0 ; n <= maxN ; n++) {
