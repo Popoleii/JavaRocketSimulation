@@ -10,7 +10,7 @@ public class Uall extends Rocket {
         this.lifeCost = 5;
 
 
-        this.cost = (int) (((maxWeight - Weight)/160 + (1/landingCrash + 1/launchExplosion)/2.4)* 1000000);
+        this.cost = (int) ((((double)carryWeight)/160 + (1/(landingCrash/100)) + 1/(launchExplosion/100)/2.4)* 10000000);
 
     }
     double probaLanding(){
