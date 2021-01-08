@@ -218,6 +218,13 @@ public class Left {
             }
 
         });
+
+        buttonU3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                
+            }
+        });
         Label blanc1 = new Label("");
         Label blanc2 = new Label("");
         Label blanc3 = new Label("");

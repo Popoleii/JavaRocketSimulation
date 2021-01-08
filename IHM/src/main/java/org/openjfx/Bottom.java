@@ -26,9 +26,6 @@ public class Bottom {
     public static Label nbiterationslabel;
     Label resultatslabel;
 
-    public static int nbFuseesUtilisees = 10;
-    public static Label nbFuseesUtiliseeslabel;
-
 
     public VBox bottom(){
 
