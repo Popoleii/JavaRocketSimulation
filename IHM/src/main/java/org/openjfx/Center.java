@@ -34,11 +34,11 @@ public class Center {
 
         // Création du graphique.
         final NumberAxis xAxis = new NumberAxis(0, 3000,100 );
-        xAxis.setLabel("x");
+        xAxis.setLabel("Coût en millions d'euros");
         final NumberAxis yAxis = new NumberAxis(0, 100, 5);
-        yAxis.setLabel("y = Math.pow(x, n)");
+        yAxis.setLabel("Pourcentage d'essais");
         final LineChart chart = new LineChart(xAxis, yAxis);
-        chart.setTitle("Fonction puissance");
+        chart.setTitle("Repartition des essais en fonction du coup");
 
 
         Button refresh = new Button("refresh");
