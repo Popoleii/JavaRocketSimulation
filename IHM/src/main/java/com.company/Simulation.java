@@ -126,11 +126,11 @@ public class Simulation {
         ArrayList U1_phase_1 = Simulation.loadU1(phase_1, remplissage);
 
 
-        ArrayList<Long> X = new ArrayList<Long>();
+        ArrayList<Integer> X = new ArrayList<Integer>();
         ArrayList Y = new ArrayList();
         int i;
         for (i = 0; i < 25; i++) {
-            X.add((long) i * 100000000);
+            X.add((int) i * 100);
             Y.add(0);
         }
         int nbrIterations = 100000;
@@ -181,9 +181,10 @@ public class Simulation {
         long nbrFusees = 0;
         for (i = 0; i < nbrIterations; i++) {
             ArrayList R = Simulation.runSimulation(U1_phase_1);
-            int k = (int) R.get(0) / 100000000;
+            long kk =  (long)R.get(0) / ((long)100000000);
+            int k = (int)kk;
             Y.set(k, (int) Y.get(k) + 1);
-            cost += (int) R.get(0);
+            cost += (long) R.get(0);
             lifeCost += (int) R.get(1);
             nbrFusees += (int) R.get(2);
         }
@@ -197,8 +198,8 @@ public class Simulation {
         Rturn.add(nbrIterations);
         Rturn.add((int)(nbrFusees/nbrIterations));
 
+        return Rturn;
 
-    return Rturn;
     }
 
 
@@ -213,7 +214,7 @@ public class Simulation {
         ArrayList<Long> X = new ArrayList<Long>();
         ArrayList Y = new ArrayList();
         int i;
-        for (i = 0; i < 15; i++) {
+        for (i = 0; i < 25; i++) {
             X.add((long) i * 100000000);
             Y.add(0);
         }
@@ -224,9 +225,10 @@ public class Simulation {
         long nbrFusees = 0;
         for (i = 0; i < nbrIterations; i++) {
             ArrayList R = Simulation.runSimulation(U1_phase_1);
-            int k = (int) R.get(0) / 100000000;
+            long kk =  (long)R.get(0) / ((long)100000000);
+            int k = (int)kk;
             Y.set(k, (int) Y.get(k) + 1);
-            cost += (int) R.get(0);
+            cost += (long) R.get(0);
             lifeCost += (int) R.get(1);
             nbrFusees += (int) R.get(2);
         }
@@ -239,7 +241,6 @@ public class Simulation {
         Rturn.add((int)(lifeCost / nbrIterations));
         Rturn.add(nbrIterations);
         Rturn.add((int)(nbrFusees/nbrIterations));
-
 
         return Rturn;
     }

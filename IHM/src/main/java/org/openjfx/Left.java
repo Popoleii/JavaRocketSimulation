@@ -7,7 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -16,9 +20,12 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Left {
     public static String monFichier = "../IHM/src/main/java/com.company/Phase-1.txt";
+    public static Node chart;
     public int cargoWeight;
     Label cargoWeightlabel;
     Slider cargoWeightslider;
@@ -44,6 +51,7 @@ public class Left {
     
 
     public VBox left(){
+
         ArrayList Results = new ArrayList();
         int i;
         for (i=0;i<4;i++){
@@ -231,6 +239,10 @@ public class Left {
                 Bottom.nbiterationslabel.setText("Nombre d'itérations effectuées :" +Bottom.nbierations);
                 Bottom.nbFuseesUtilisees = (int)Results.get(5);
                 Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
+                Center.x = (ArrayList)Results.get(0);
+                Center.y = (ArrayList)Results.get(1);
+
+
                 
             }
         });
