@@ -34,6 +34,7 @@ import java.io.IOException;
 public class App extends Application {
 
     public static Bottom vboxbottom;
+    public static Center vboxcenter;
     private static Scene scene;
 
     @Override

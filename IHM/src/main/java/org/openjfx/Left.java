@@ -48,7 +48,8 @@ public class Left {
     Label chemintxt;
     TextField chemin;
     Label choixfusee;
-    
+    public static int pass =0;
+
 
     public VBox left(){
 

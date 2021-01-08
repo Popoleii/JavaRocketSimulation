@@ -56,7 +56,8 @@ public class Center {
         chart.getData().setAll(seriesList);
             // Montage de l'IU.
             root.getChildren().add(chart);
-
+            Left.pass --;
+        }
 
 
         return root;
