@@ -222,6 +222,15 @@ public class Left {
         buttonU3.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                ArrayList Results = Simulation.SimulateUall(monFichier,cargoWeight, launchCrashProbabily,landCrashProbability,(int)remplissage);
+                Bottom.averageCost = (int)Results.get(2);
+                Bottom.averageCostlabel.setText("Prix moyen de la mission: " +Bottom.averageCost);
+                Bottom.averageLifeLost = (int)Results.get(3);
+                Bottom.averageLifeLostlabel.setText("Cout moyen en vies humaines: " +Bottom.averageLifeLost);
+                Bottom.nbierations = (int)Results.get(4);
+                Bottom.nbiterationslabel.setText("Nombre d'itérations effectuées :" +Bottom.nbierations);
+                Bottom.nbFuseesUtilisees = (int)Results.get(5);
+                Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
                 
             }
         });
