@@ -34,7 +34,7 @@ public class Left {
     Slider remplissageslider;
 
 
-    private int cost = 1000;
+    private int cost = 0;
     Label costlabel;
 
     Label general;
@@ -149,8 +149,8 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number capacitefusee) {
                 cargoWeight = (int) cargoWeightslider.getValue();
-                Bottom.oneRocketCost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
-                Bottom.oneRocketCostlabel.setText("Prix unitaire des fusées utilisées: " +Bottom.oneRocketCost);
+                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                costlabel.setText("Rocket cost: " + cost);
 
 
             }
@@ -172,8 +172,8 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 launchCrashProbabily = (int) launchCrashProbabilyslider.getValue();
-                Bottom.oneRocketCost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
-                Bottom.oneRocketCostlabel.setText("Prix unitaire des fusées utilisées: " +Bottom.oneRocketCost);
+                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                costlabel.setText("Rocket cost: " + cost);
             }
         });
 
@@ -193,8 +193,8 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 landCrashProbability = (int) landCrashProbabilityslider.getValue();
-                Bottom.oneRocketCost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
-                Bottom.oneRocketCostlabel.setText("Prix unitaire des fusées utilisées: " +Bottom.oneRocketCost);
+                cost = (int) ((cargoWeight)/160 + (1/(landCrashProbability/100) + 1/(launchCrashProbabily/100)/2.4)* 1000000);
+                costlabel.setText("Rocket cost: " + cost);
             }
 
         });

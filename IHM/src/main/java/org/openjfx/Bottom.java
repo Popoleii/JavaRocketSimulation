@@ -15,8 +15,6 @@ import javafx.util.Duration;
 public class Bottom {
     public static int nbFuseesUtilisees;
     public static Label nbFuseesUtiliseeslabel;
-    public static int oneRocketCost;
-    public static Label oneRocketCostlabel;
     private int stop = 0;
     public static int averageCost;
     public static Label averageCostlabel;
@@ -37,7 +35,6 @@ public class Bottom {
         resultatslabel.setFont(Font.font("Cambria", 25));
         resultatslabel.setTextFill(Color.web("#0076a3"));
         nbiterationslabel = new Label("Nombre d'itérations effectuées: " + nbierations);
-        oneRocketCostlabel = new Label("Prix unitaire des fusées utilisées: " + oneRocketCost );
 
         nbFuseesUtiliseeslabel = new Label("Nombre de fusées utilisées: " +nbFuseesUtilisees);
         averageCostlabel = new Label("Prix moyen de la mission: " +averageCost);
@@ -48,7 +45,6 @@ public class Bottom {
 
             root.getChildren().addAll(resultatslabel);
             root.getChildren().addAll(nbiterationslabel);
-            root.getChildren().addAll(oneRocketCostlabel);
             root.getChildren().addAll(nbFuseesUtiliseeslabel);
             root.getChildren().addAll(averageCostlabel);
             root.getChildren().addAll(averageLifeLostlabel);
