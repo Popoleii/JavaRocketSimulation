@@ -2,6 +2,7 @@ package org.openjfx;
 import com.company.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
@@ -12,6 +13,7 @@ public class Right {
         VBox root = new VBox();
         root.setPadding(new Insets(10));
         root.setSpacing(1);
+
         ArrayList<Item> items = new ArrayList();
         items = Simulation.loadItems(Left.monFichier);
         int n = items.size();

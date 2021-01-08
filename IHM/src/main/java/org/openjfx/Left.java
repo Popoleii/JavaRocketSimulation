@@ -217,12 +217,12 @@ public class Left {
         remplissagelabel = new Label("Choix du poucentage de remplissage des fusées:");
         remplissageslider = new Slider(1, 50, 50);
         remplissageslider.setMin(1);
-        remplissageslider.setMax(50);
-        remplissageslider.setValue(25);
+        remplissageslider.setMax(100);
+        remplissageslider.setValue(100);
         remplissageslider.setShowTickLabels(true);
         remplissageslider.setShowTickMarks(true);
-        remplissageslider.setMajorTickUnit(24);
-        remplissageslider.setMinorTickCount(5);
+        remplissageslider.setMajorTickUnit(49);
+        remplissageslider.setMinorTickCount(10);
         remplissageslider.setBlockIncrement(1);
         remplissageslider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
