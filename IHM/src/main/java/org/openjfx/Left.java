@@ -36,7 +36,7 @@ public class Left {
     private float landCrashProbability = 25;
     Label landCrashProbabilitylabel;
     Slider landCrashProbabilityslider;
-    private float remplissage;
+    private float remplissage = 100;
     Label remplissagelabel;
     Slider remplissageslider;
 
@@ -133,6 +133,7 @@ public class Left {
                 Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
                 Center.x = (ArrayList)Results.get(0);
                 Center.y = (ArrayList)Results.get(1);
+                System.out.println((int)remplissage);
 
             }
         });
@@ -233,6 +234,7 @@ public class Left {
             public void changed(ObservableValue<? extends Number> observable, //
                                 Number oldValue, Number probacrashdecollage) {
                 remplissage = (int) remplissageslider.getValue();
+                System.out.println(remplissage);
 
             }
 
