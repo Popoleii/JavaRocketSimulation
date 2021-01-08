@@ -170,7 +170,7 @@ public class Simulation {
         ArrayList<Long> X = new ArrayList<Long>();
         ArrayList Y = new ArrayList();
         int i;
-        for (i = 0; i < 15; i++) {
+        for (i = 0; i < 25; i++) {
             X.add((long) i * 100000000);
             Y.add(0);
         }
