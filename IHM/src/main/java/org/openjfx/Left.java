@@ -48,7 +48,7 @@ public class Left {
     Label chemintxt;
     TextField chemin;
     Label choixfusee;
-    public static int pass =0;
+
 
 
     public VBox left(){
@@ -107,6 +107,9 @@ public class Left {
                 Bottom.nbiterationslabel.setText("Nombre d'itérations effectuées :" +Bottom.nbierations);
                 Bottom.nbFuseesUtilisees = (int)Results.get(5);
                 Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
+                Center.x = (ArrayList)Results.get(0);
+                Center.y = (ArrayList)Results.get(1);
+
             }
         });
 
@@ -128,6 +131,9 @@ public class Left {
                 Bottom.nbiterationslabel.setText("Nombre d'itérations effectuées :" +Bottom.nbierations);
                 Bottom.nbFuseesUtilisees = (int)Results.get(5);
                 Bottom.nbFuseesUtiliseeslabel.setText("Nombre de fusées utilisées :" +Bottom.nbFuseesUtilisees);
+                Center.x = (ArrayList)Results.get(0);
+                Center.y = (ArrayList)Results.get(1);
+
             }
         });
 
